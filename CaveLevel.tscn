@@ -240,7 +240,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 0/shapes = [  ]
 0/z_index = 0
 
-[node name="Environment" type="Node2D"]
+[node name="CaveLevel" type="Node2D"]
 
 [node name="CaveFloorTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
