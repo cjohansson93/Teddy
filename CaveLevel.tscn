@@ -1,6 +1,7 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Tilesets/CaveTileMap.png" type="Texture" id=1]
+[ext_resource path="res://DTutorial.tscn" type="PackedScene" id=2]
 
 [sub_resource type="TileSet" id=1]
 0/name = "CaveTileMap.png 0"
@@ -260,3 +261,7 @@ tile_set = SubResource( 21 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 15, 0, 65537, 16, 0, 65538, 65551, 0, 131073, 65552, 0, 131074, 131073, 0, 65537, 131074, 0, 65538, 196608, 0, 65537, 196609, 0, 3, 196610, 0, 131075, 196611, 0, 65538, 262144, 0, 196611, 262145, 0, 262150, 262146, 0, 262150, 262147, 0, 131075, 262148, 0, 65538, 327680, 0, 196611, 327681, 0, 131076, 327682, 0, 262150, 327683, 0, 0, 327684, 0, 131074, 327691, 0, 65537, 327692, 0, 65538, 393216, 0, 131073, 393217, 0, 1, 393218, 0, 1, 393219, 0, 131074, 393227, 0, 131073, 393228, 0, 131074 )
+
+[node name="DTutorial" parent="." instance=ExtResource( 2 )]
+
+[editable path="DTutorial"]

@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Teddy"
-run/main_scene="res://DTutorial.tscn"
+run/main_scene="res://CaveLevel.tscn"
 config/icon="res://icon.png"
 
 [display]
