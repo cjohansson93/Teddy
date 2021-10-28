@@ -1,7 +1,7 @@
 [gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Tilesets/CaveTileMap.png" type="Texture" id=1]
-[ext_resource path="res://DTutorial.tscn" type="PackedScene" id=2]
+[ext_resource path="res://YSort.tscn" type="PackedScene" id=2]
 
 [sub_resource type="TileSet" id=1]
 0/name = "CaveTileMap.png 0"
