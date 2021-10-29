@@ -1,25 +1,11 @@
+[gd_scene load_steps=2 format=2]
 
-[gd_scene load_steps=3 format=2]
-
-[ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 
 [node name="YSort" type="YSort"]
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="Bush" parent="." instance=ExtResource( 1 )]
-position = Vector2( 56, 88 )
-
-[node name="Bush2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 208, 128 )
-
-[node name="Bush3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 216, 24 )
-
-[node name="Bush4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 104, 144 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 112, 64 )
