@@ -424,20 +424,25 @@ tile_data = PoolIntArray( -65538, 0, 65537, -65537, 0, 65539, -131072, 0, 65539,
 
 [node name="YSort" parent="." instance=ExtResource( 2 )]
 
-[node name="Sprite" parent="YSort/Player" index="0"]
-position = Vector2( -193.406, -75.4308 )
+[node name="Player" parent="YSort" index="0"]
+position = Vector2( -90.9411, 120.849 )
 
-[node name="AnimationTree" parent="YSort/Player" index="3"]
-parameters/playback = SubResource( 39 )
-
-[node name="Camera2D" type="Camera2D" parent="YSort/Player" index="4"]
-position = Vector2( 0.950287, -3.43878 )
+[node name="Camera2D" type="Camera2D" parent="YSort/Player" index="0"]
 current = true
 limit_left = -140
 limit_top = -80
 limit_right = 620
 limit_bottom = 340
 smoothing_enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" parent="YSort/Player" index="1"]
+position = Vector2( 0, -8.77806 )
+
+[node name="AnimationTree" parent="YSort/Player" index="4"]
+parameters/playback = SubResource( 39 )
 
 [editable path="YSort"]
 [editable path="YSort/Player"]
