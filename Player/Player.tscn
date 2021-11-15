@@ -392,10 +392,10 @@ parameters/Run/blend_position = Vector2( 0, 0 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0.950287, -3.43878 )
 current = true
-limit_left = -140
-limit_top = -80
-limit_right = 620
-limit_bottom = 1040
+limit_left = -150
+limit_top = -90
+limit_right = 630
+limit_bottom = 1050
 smoothing_enabled = true
 __meta__ = {
 "_edit_lock_": true
