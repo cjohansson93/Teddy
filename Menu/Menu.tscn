@@ -1,0 +1,117 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Menu/Menu.gd" type="Script" id=3]
+[ext_resource path="res://Menu/FreestylingCentipede-ELpr.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Menu/Background3.png" type="Texture" id=5]
+[ext_resource path="res://Menu/Fade_In.tscn" type="PackedScene" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+outline_size = 2
+outline_color = Color( 0.827451, 0.0156863, 0.0156863, 1 )
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+outline_size = 1
+outline_color = Color( 0.827451, 0.0156863, 0.0156863, 1 )
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+outline_size = 1
+outline_color = Color( 0.827451, 0.0156863, 0.0156863, 1 )
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="Theme" id=4]
+
+[sub_resource type="DynamicFont" id=5]
+outline_size = 1
+outline_color = Color( 0.827451, 0.0156863, 0.0156863, 1 )
+use_filter = true
+font_data = ExtResource( 4 )
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuContainer" type="VBoxContainer" parent="."]
+margin_top = 1.0
+margin_right = 320.0
+margin_bottom = 179.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TeddyBear" type="Sprite" parent="MenuContainer"]
+position = Vector2( 160, 89 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="MenuContainer"]
+margin_right = 320.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Teddy"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuContainer"]
+margin_top = 72.0
+margin_right = 320.0
+margin_bottom = 178.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Buttons" type="VBoxContainer" parent="MenuContainer/HBoxContainer"]
+margin_right = 50.0
+margin_bottom = 106.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="MenuContainer/HBoxContainer/Buttons"]
+margin_top = 13.0
+margin_right = 50.0
+margin_bottom = 37.0
+focus_neighbour_top = NodePath("../QuitButton3")
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Start"
+flat = true
+
+[node name="OptionButton2" type="Button" parent="MenuContainer/HBoxContainer/Buttons"]
+margin_top = 41.0
+margin_right = 50.0
+margin_bottom = 65.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Options"
+flat = true
+
+[node name="QuitButton3" type="Button" parent="MenuContainer/HBoxContainer/Buttons"]
+margin_top = 69.0
+margin_right = 50.0
+margin_bottom = 93.0
+focus_neighbour_bottom = NodePath("../StartButton")
+theme = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Quit"
+flat = true
+
+[node name="FadeIn" parent="." instance=ExtResource( 6 )]
+color = Color( 0, 0, 0, 0 )
+
+[connection signal="pressed" from="MenuContainer/HBoxContainer/Buttons/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="MenuContainer/HBoxContainer/Buttons/OptionButton2" to="." method="_on_OptionButton2_pressed"]
+[connection signal="pressed" from="MenuContainer/HBoxContainer/Buttons/QuitButton3" to="." method="_on_QuitButton3_pressed"]
+[connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
