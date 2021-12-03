@@ -1,9 +1,27 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
+[ext_resource path="res://Menu/BackgroundSpriteSheet (1).png" type="Texture" id=1]
 [ext_resource path="res://Menu/Menu.gd" type="Script" id=3]
 [ext_resource path="res://Menu/FreestylingCentipede-ELpr.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://Menu/Background3.png" type="Texture" id=5]
 [ext_resource path="res://Menu/Fade_In.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Animation" id=6]
+resource_name = "TeddyFire"
+length = 0.6
+loop = true
+step = 0.15
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -12,11 +30,15 @@ outline_color = Color( 0.827451, 0.0156863, 0.0156863, 1 )
 use_filter = true
 font_data = ExtResource( 4 )
 
+[sub_resource type="StyleBoxEmpty" id=7]
+
 [sub_resource type="DynamicFont" id=2]
 outline_size = 1
 outline_color = Color( 0.827451, 0.0156863, 0.0156863, 1 )
 use_filter = true
 font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxEmpty" id=8]
 
 [sub_resource type="DynamicFont" id=3]
 outline_size = 1
@@ -25,6 +47,8 @@ use_filter = true
 font_data = ExtResource( 4 )
 
 [sub_resource type="Theme" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=9]
 
 [sub_resource type="DynamicFont" id=5]
 outline_size = 1
@@ -50,7 +74,13 @@ __meta__ = {
 
 [node name="TeddyBear" type="Sprite" parent="MenuContainer"]
 position = Vector2( 160, 89 )
-texture = ExtResource( 5 )
+texture = ExtResource( 1 )
+hframes = 4
+frame = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MenuContainer/TeddyBear"]
+autoplay = "TeddyFire"
+anims/TeddyFire = SubResource( 6 )
 
 [node name="Label" type="Label" parent="MenuContainer"]
 margin_right = 320.0
@@ -83,6 +113,7 @@ margin_top = 13.0
 margin_right = 50.0
 margin_bottom = 37.0
 focus_neighbour_top = NodePath("../QuitButton3")
+custom_styles/focus = SubResource( 7 )
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Start"
@@ -92,6 +123,7 @@ flat = true
 margin_top = 41.0
 margin_right = 50.0
 margin_bottom = 65.0
+custom_styles/focus = SubResource( 8 )
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Options"
@@ -103,6 +135,7 @@ margin_right = 50.0
 margin_bottom = 93.0
 focus_neighbour_bottom = NodePath("../StartButton")
 theme = SubResource( 4 )
+custom_styles/focus = SubResource( 9 )
 custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Quit"
