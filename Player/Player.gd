@@ -26,6 +26,7 @@ func _ready():
 	randomize()
 	stats.connect("no_health", self, "queue_free")
 	animationTree.active = true
+	self.global_position = Global.player_initial_map_position
 
 func _physics_process(delta):
 	match state:
