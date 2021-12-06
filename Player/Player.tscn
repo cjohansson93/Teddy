@@ -761,9 +761,13 @@ texture = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="."]
 material = SubResource( 1 )
-position = Vector2( 0, -9 )
+position = Vector2( 2.94646, -9.70154 )
 texture = ExtResource( 1 )
-hframes = 60
+hframes = 40
+frame = 39
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
