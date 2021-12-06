@@ -2,12 +2,12 @@
 
 [ext_resource path="res://Enemies/Bat.png" type="Texture" id=1]
 [ext_resource path="res://Shadows/SmallShadow.png" type="Texture" id=2]
-[ext_resource path="res://Overlap/Hurtbox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Boxes/Hurtbox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enemies/Bat.gd" type="Script" id=4]
 [ext_resource path="res://Stats.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Overlap/Hitbox.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Overlap/SoftCollision.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Boxes/Hitbox.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Boxes/SoftCollision.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Enemies/WanderController.tscn" type="PackedScene" id=9]
 [ext_resource path="res://WhiteColor.shader" type="Shader" id=10]
 
@@ -99,7 +99,7 @@ script = ExtResource( 4 )
 material = SubResource( 1 )
 frames = SubResource( 7 )
 animation = "Fly"
-frame = 3
+frame = 4
 playing = true
 offset = Vector2( 0, -12 )
 
