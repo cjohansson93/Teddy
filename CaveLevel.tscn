@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=51 format=2]
 
 [ext_resource path="res://Tilesets/CaveTileMap.png" type="Texture" id=1]
 [ext_resource path="res://YSort.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://World/Cavedoor.tscn" type="PackedScene" id=4]
 [ext_resource path="res://World/WelcomeMat.png" type="Texture" id=5]
 [ext_resource path="res://World/Portal.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Music and Sounds/Walking Through Hell.wav" type="AudioStream" id=7]
 
 [sub_resource type="TileSet" id=1]
 0/name = "CaveTileMap.png 0"
@@ -470,6 +471,10 @@ position = Vector2( 239.392, -5.24949 )
 scale = Vector2( 0.0807423, 0.0826031 )
 texture = ExtResource( 5 )
 
+[node name="WalkingMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
+
 [node name="Portal" parent="." instance=ExtResource( 6 )]
 position = Vector2( 240.148, -38.9326 )
 next_scene_path = "res://FireLevel.tscn"
@@ -485,7 +490,7 @@ position = Vector2( -6.80734, 905.849 )
 collision_layer = 3
 collision_mask = 3
 
-[node name="AnimationTree" parent="YSort/Player" index="4"]
+[node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 42 )
 
 [node name="CollisionShape2D" parent="YSort/Player/Hurtbox" index="0"]
