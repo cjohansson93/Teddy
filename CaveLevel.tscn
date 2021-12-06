@@ -501,7 +501,7 @@ position = Vector2( -6.80734, 905.849 )
 collision_layer = 3
 collision_mask = 3
 
-[node name="AnimationTree" parent="YSort/Player" index="3"]
+[node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 42 )
 
 [node name="CollisionShape2D" parent="YSort/Player/Hurtbox" index="0"]
@@ -568,4 +568,5 @@ position = Vector2( 105.037, 947.107 )
 [editable path="Portal"]
 [editable path="YSort"]
 [editable path="YSort/Player"]
+[editable path="YSort/Player/HitboxPivot/SwordHitbox"]
 [editable path="YSort/Player/Hurtbox"]

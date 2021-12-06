@@ -13,7 +13,7 @@ enum {
 
 var state = MOVE
 var velocity = Vector2.ZERO
-var stats = PlayerStats
+var stats = stats
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
@@ -26,7 +26,6 @@ func _ready():
 	randomize()
 	stats.connect("no_health", self, "queue_free")
 	animationTree.active = true
-	swordHitbox.knockback_vector = roll_vector
 
 func _physics_process(delta):
 	match state:
