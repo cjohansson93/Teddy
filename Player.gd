@@ -12,12 +12,14 @@ enum {
 
 var state = MOVE
 var velocity = Vector2.ZERO
+var stats = PlayerStats
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
 
 func _ready():
+	stats.connect("no_health", self, "queue_free")
 	animationTree.active = true
 	self.global_position = Global.player_initial_map_position
 
