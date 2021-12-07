@@ -17,8 +17,10 @@ func _on_StartButton_pressed():
 	$FadeIn.show()
 	$FadeIn.fade_in()
 
-func _on_OptionButton2_pressed():
-	pass # Replace with function body.
+func _on_ControlsButton2_pressed():
+	scene_path_to_load = "res://Menu/Controls.tscn"
+	$FadeIn.show()
+	$FadeIn.fade_in()
 
 
 func _on_QuitButton3_pressed():

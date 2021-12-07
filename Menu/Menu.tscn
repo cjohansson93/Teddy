@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Menu/BackgroundSpriteSheet (1).png" type="Texture" id=1]
+[ext_resource path="res://Music and Sounds/Continue_.wav" type="AudioStream" id=2]
 [ext_resource path="res://Menu/Menu.gd" type="Script" id=3]
 [ext_resource path="res://Menu/FreestylingCentipede-ELpr.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Menu/Fade_In.tscn" type="PackedScene" id=6]
@@ -101,7 +102,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Buttons" type="VBoxContainer" parent="MenuContainer/HBoxContainer"]
-margin_right = 50.0
+margin_right = 55.0
 margin_bottom = 106.0
 alignment = 1
 __meta__ = {
@@ -110,29 +111,33 @@ __meta__ = {
 
 [node name="StartButton" type="Button" parent="MenuContainer/HBoxContainer/Buttons"]
 margin_top = 13.0
-margin_right = 50.0
+margin_right = 55.0
 margin_bottom = 37.0
 focus_neighbour_top = NodePath("../QuitButton3")
+focus_neighbour_bottom = NodePath("../ControlsButton2")
 custom_styles/focus = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Start"
 flat = true
 
-[node name="OptionButton2" type="Button" parent="MenuContainer/HBoxContainer/Buttons"]
+[node name="ControlsButton2" type="Button" parent="MenuContainer/HBoxContainer/Buttons"]
 margin_top = 41.0
-margin_right = 50.0
+margin_right = 55.0
 margin_bottom = 65.0
+focus_neighbour_top = NodePath("../StartButton")
+focus_neighbour_bottom = NodePath("../QuitButton3")
 custom_styles/focus = SubResource( 5 )
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Options"
+text = "Controls"
 flat = true
 
 [node name="QuitButton3" type="Button" parent="MenuContainer/HBoxContainer/Buttons"]
 margin_top = 69.0
-margin_right = 50.0
+margin_right = 55.0
 margin_bottom = 93.0
+focus_neighbour_top = NodePath("../ControlsButton2")
 focus_neighbour_bottom = NodePath("../StartButton")
 theme = SubResource( 7 )
 custom_styles/focus = SubResource( 8 )
@@ -144,7 +149,9 @@ flat = true
 [node name="FadeIn" parent="." instance=ExtResource( 6 )]
 color = Color( 0, 0, 0, 0 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
+
 [connection signal="pressed" from="MenuContainer/HBoxContainer/Buttons/StartButton" to="." method="_on_StartButton_pressed"]
-[connection signal="pressed" from="MenuContainer/HBoxContainer/Buttons/OptionButton2" to="." method="_on_OptionButton2_pressed"]
-[connection signal="pressed" from="MenuContainer/HBoxContainer/Buttons/QuitButton3" to="." method="_on_QuitButton3_pressed"]
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]

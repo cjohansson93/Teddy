@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Menu/Controls.png" type="Texture" id=1]
+[ext_resource path="res://Menu/Controls.gd" type="Script" id=2]
+[ext_resource path="res://Music and Sounds/Continue_.wav" type="AudioStream" id=3]
+[ext_resource path="res://Menu/FreestylingCentipede-ELpr.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Menu/Fade_In.tscn" type="PackedScene" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+outline_size = 1
+outline_color = Color( 0.827451, 0.0156863, 0.0156863, 1 )
+use_filter = true
+font_data = ExtResource( 4 )
+
+[node name="Controls" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuContainer" type="VBoxContainer" parent="."]
+margin_top = 1.0
+margin_right = 320.0
+margin_bottom = 179.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TeddyBear" type="Sprite" parent="MenuContainer"]
+position = Vector2( 160, 89 )
+texture = ExtResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuContainer"]
+margin_right = 320.0
+margin_bottom = 178.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Buttons" type="VBoxContainer" parent="MenuContainer/HBoxContainer"]
+margin_right = 47.0
+margin_bottom = 178.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReturnButton" type="Button" parent="MenuContainer/HBoxContainer/Buttons"]
+margin_top = 77.0
+margin_right = 47.0
+margin_bottom = 101.0
+focus_neighbour_top = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+custom_styles/focus = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Return"
+flat = true
+
+[node name="FadeIn" parent="." instance=ExtResource( 6 )]
+margin_left = 0.280617
+margin_right = 0.280609
+color = Color( 0, 0, 0, 0 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[connection signal="pressed" from="MenuContainer/HBoxContainer/Buttons/ReturnButton" to="." method="_on_StartButton_pressed"]
+[connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]

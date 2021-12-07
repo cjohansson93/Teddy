@@ -1,0 +1,12 @@
+[gd_scene format=2]
+
+[node name="BossCastle" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 1
+
+[node name="TileMap2" type="TileMap" parent="."]
+format = 1
+
+[node name="TileMap3" type="TileMap" parent="."]
+format = 1
