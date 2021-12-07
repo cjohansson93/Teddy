@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://UI/Pause.gd" type="Script" id=1]
-[ext_resource path="res://black.png" type="Texture" id=2]
+[ext_resource path="res://UI/black.png" type="Texture" id=2]
 [ext_resource path="res://Menu/FreestylingCentipede-ELpr.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Music and Sounds/Continue_.wav" type="AudioStream" id=4]
-
 
 [sub_resource type="DynamicFont" id=1]
 size = 25
@@ -17,16 +15,12 @@ layer = 100
 
 [node name="Pause" type="Control" parent="."]
 pause_mode = 2
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="PauseMusic" type="AudioStreamPlayer" parent="Pause"]
-stream = ExtResource( 4 )
 
 [node name="Background" type="TextureRect" parent="Pause"]
 self_modulate = Color( 1, 1, 1, 0.462745 )

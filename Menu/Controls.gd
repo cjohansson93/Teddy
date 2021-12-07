@@ -12,8 +12,8 @@ func _ready():
 
 var scene_path_to_load
 
-func _on_StartButton_pressed():
-	scene_path_to_load = "res://Menu.tscn"
+func _on_ReturnButton_pressed():
+	scene_path_to_load = "res://Menu/Menu.tscn"
 	$FadeIn.show()
 	$FadeIn.fade_in()
 

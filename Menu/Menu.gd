@@ -13,12 +13,12 @@ func _ready():
 var scene_path_to_load
 
 func _on_StartButton_pressed():
-	scene_path_to_load = "res://ForestLevel.tscn"
+	scene_path_to_load = "res://CaveLevel.tscn"
 	$FadeIn.show()
 	$FadeIn.fade_in()
 
 func _on_ControlsButton2_pressed():
-	scene_path_to_load = "res://Controls.tscn"
+	scene_path_to_load = "res://Menu/Controls.tscn"
 	$FadeIn.show()
 	$FadeIn.fade_in()
 

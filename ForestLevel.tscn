@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Tilesets/RPG Nature Tileset.png" type="Texture" id=1]
 [ext_resource path="res://Tilesets/tileset (1).png" type="Texture" id=2]
@@ -11,7 +11,6 @@
 [ext_resource path="res://Tilesets/old-dark-castle-interior-tileset.png" type="Texture" id=9]
 [ext_resource path="res://World/GoodbyeMat.png" type="Texture" id=10]
 [ext_resource path="res://Music and Sounds/Walking Through Hell.wav" type="AudioStream" id=11]
-[ext_resource path="res://UI/Pause.tscn" type="PackedScene" id=12]
 [ext_resource path="res://World/Grass.png" type="Texture" id=13]
 
 [sub_resource type="TileSet" id=1]
@@ -701,8 +700,6 @@ player_spawn_location = Vector2( 245, -10 )
 
 [node name="Portal2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 14.4214, -112.299 )
-
-[node name="PauseLayer" parent="." instance=ExtResource( 12 )]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 11 )

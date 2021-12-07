@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Tilesets/FireTileMap.png" type="Texture" id=1]
 [ext_resource path="res://YSort.tscn" type="PackedScene" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://World/firedoor.png" type="Texture" id=4]
 [ext_resource path="res://Enemies/FireSkull.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Music and Sounds/Walking Through Hell.wav" type="AudioStream" id=6]
-[ext_resource path="res://UI/Pause.tscn" type="PackedScene" id=7]
 
 [sub_resource type="TileSet" id=1]
 0/name = "FireTileMap.png 0"
@@ -520,8 +519,6 @@ position = Vector2( 438.312, 943.015 )
 
 [node name="FlameSkull23" parent="." instance=ExtResource( 5 )]
 position = Vector2( 525.765, 850.516 )
-
-[node name="PauseLayer" parent="." instance=ExtResource( 7 )]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 6 )
