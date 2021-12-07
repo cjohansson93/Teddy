@@ -89,8 +89,11 @@ attack={
 
 [layer_names]
 
-2d_physics/layer_1="Player"
-2d_physics/layer_2="Portals"
+2d_physics/layer_1="Terrain"
+2d_physics/layer_2="Water"
+2d_physics/layer_3="Enemies"
+2d_physics/layer_4="Player"
+2d_physics/layer_5="Portal"
 
 [physics]
 
