@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Tilesets/IceTileMap.png" type="Texture" id=1]
 [ext_resource path="res://YSort.tscn" type="PackedScene" id=2]
@@ -261,6 +261,8 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 
+[sub_resource type="AnimationNodeStateMachinePlayback" id=24]
+
 [node name="IceLevel" type="Node2D"]
 __meta__ = {
 "_edit_lock_": true
@@ -318,4 +320,11 @@ player_spawn_location = Vector2( 272, -25 )
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( 272.722, 982.33 )
 
+[node name="AnimationTree" parent="YSort/Player" index="4"]
+parameters/playback = SubResource( 24 )
+
 [editable path="YSort"]
+[editable path="YSort/Player"]
+[editable path="YSort/Player/HitboxPivot/SwordHitbox"]
+[editable path="YSort/Player/Hurtbox"]
+[editable path="YSort/Player/Portalbox"]
