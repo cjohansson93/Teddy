@@ -1,9 +1,10 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Tilesets/FireTileMap.png" type="Texture" id=1]
 [ext_resource path="res://YSort.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/Portal.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/firedoor.png" type="Texture" id=4]
+[ext_resource path="res://Enemies/FireSkull.tscn" type="PackedScene" id=5]
 
 [sub_resource type="TileSet" id=1]
 0/name = "FireTileMap.png 0"
@@ -451,6 +452,75 @@ position = Vector2( 243.657, 990.994 )
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 39 )
+
+[node name="FlameSkull" parent="." instance=ExtResource( 5 )]
+position = Vector2( 73.2621, 830.751 )
+
+[node name="FlameSkull2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 466.323, 821.746 )
+
+[node name="FlameSkull3" parent="." instance=ExtResource( 5 )]
+position = Vector2( -24.0413, 622.157 )
+
+[node name="FlameSkull4" parent="." instance=ExtResource( 5 )]
+position = Vector2( -57.0046, 338.851 )
+
+[node name="FlameSkull5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 546.134, 629.284 )
+
+[node name="FlameSkull6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 525.643, 429.723 )
+
+[node name="FlameSkull7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 566.625, 242.634 )
+
+[node name="FlameSkull8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 308.264, 96.7654 )
+
+[node name="FlameSkull9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 259.613, 276.015 )
+
+[node name="FlameSkull10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 204.868, 19.2813 )
+
+[node name="FlameSkull11" parent="." instance=ExtResource( 5 )]
+position = Vector2( 228.465, 298.668 )
+
+[node name="FlameSkull12" parent="." instance=ExtResource( 5 )]
+position = Vector2( 264.332, 299.612 )
+
+[node name="FlameSkull13" parent="." instance=ExtResource( 5 )]
+position = Vector2( 351.169, 37.2149 )
+
+[node name="FlameSkull14" parent="." instance=ExtResource( 5 )]
+position = Vector2( 557.877, 0.403809 )
+
+[node name="FlameSkull15" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3.82318, 586.921 )
+
+[node name="FlameSkull16" parent="." instance=ExtResource( 5 )]
+position = Vector2( -33.9318, 583.146 )
+
+[node name="FlameSkull17" parent="." instance=ExtResource( 5 )]
+position = Vector2( -54.4531, 66.8008 )
+
+[node name="FlameSkull18" parent="." instance=ExtResource( 5 )]
+position = Vector2( -64.5439, -2.15268 )
+
+[node name="FlameSkull19" parent="." instance=ExtResource( 5 )]
+position = Vector2( -22.4991, 460.34 )
+
+[node name="FlameSkull20" parent="." instance=ExtResource( 5 )]
+position = Vector2( -76.3164, 791.654 )
+
+[node name="FlameSkull21" parent="." instance=ExtResource( 5 )]
+position = Vector2( -74.6346, 961.515 )
+
+[node name="FlameSkull22" parent="." instance=ExtResource( 5 )]
+position = Vector2( 438.312, 943.015 )
+
+[node name="FlameSkull23" parent="." instance=ExtResource( 5 )]
+position = Vector2( 525.765, 850.516 )
 
 [editable path="Portal"]
 [editable path="Portal2"]
