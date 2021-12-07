@@ -145,6 +145,4 @@ flat = true
 color = Color( 0, 0, 0, 0 )
 
 [connection signal="pressed" from="MenuContainer/HBoxContainer/Buttons/StartButton" to="." method="_on_StartButton_pressed"]
-[connection signal="pressed" from="MenuContainer/HBoxContainer/Buttons/OptionButton2" to="." method="_on_OptionButton2_pressed"]
-[connection signal="pressed" from="MenuContainer/HBoxContainer/Buttons/QuitButton3" to="." method="_on_QuitButton3_pressed"]
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
