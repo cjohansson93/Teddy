@@ -154,4 +154,6 @@ stream = ExtResource( 2 )
 autoplay = true
 
 [connection signal="pressed" from="MenuContainer/HBoxContainer/Buttons/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="MenuContainer/HBoxContainer/Buttons/ControlsButton2" to="." method="_on_ControlsButton2_pressed"]
+[connection signal="pressed" from="MenuContainer/HBoxContainer/Buttons/QuitButton3" to="." method="_on_QuitButton3_pressed"]
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]

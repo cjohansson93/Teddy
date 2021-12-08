@@ -69,5 +69,5 @@ color = Color( 0, 0, 0, 0 )
 stream = ExtResource( 3 )
 autoplay = true
 
-[connection signal="pressed" from="MenuContainer/HBoxContainer/Buttons/ReturnButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="MenuContainer/HBoxContainer/Buttons/ReturnButton" to="." method="_on_ReturnButton_pressed"]
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]

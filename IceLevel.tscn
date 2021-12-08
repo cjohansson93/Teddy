@@ -312,6 +312,8 @@ __meta__ = {
 
 [node name="Portal2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 240.279, -57.0954 )
+collision_layer = 0
+collision_mask = 16
 next_scene_path = "res://ForestLevel.tscn"
 player_spawn_location = Vector2( 240, 955 )
 
@@ -330,176 +332,164 @@ position = Vector2( 272.722, 982.33 )
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 24 )
 
-[node name="Bat" parent="." instance=ExtResource( 5 )]
-position = Vector2( -44.6213, 899.06 )
+[node name="DemonSlime" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( -72.0367, 897.914 )
 
-[node name="Bat" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( -9.54092, -39.8474 )
+[node name="DemonSlime2" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 8.48248, 911.688 )
 
-[node name="Bat2" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( -48.8271, -37.0413 )
+[node name="DemonSlime3" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( -21.1825, 956.185 )
 
-[node name="Bat3" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( -37.0412, 11.2246 )
+[node name="DemonSlime4" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( -103.821, 836.466 )
 
-[node name="Bat4" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 501.674, 26.1765 )
+[node name="DemonSlime5" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( -45.5501, 861.893 )
 
-[node name="Bat5" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 91.2112, 38.1901 )
+[node name="DemonSlime6" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 473.587, 888.379 )
 
-[node name="Bat6" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 542.387, -27.8845 )
+[node name="DemonSlime7" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 507.49, 908.509 )
 
-[node name="Bat7" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 571.753, -24.5474 )
+[node name="DemonSlime8" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 496.895, 861.893 )
 
-[node name="Bat8" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 605.124, 4.15174 )
+[node name="DemonSlime9" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 533.976, 879.904 )
 
-[node name="Bat9" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 548.394, 10.1585 )
+[node name="DemonSlime10" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 553.047, 921.223 )
 
-[node name="Bat10" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 583.1, 57.5453 )
+[node name="DemonSlime11" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 549.868, 715.687 )
 
-[node name="Bat11" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 623.812, -217.432 )
+[node name="DemonSlime12" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 511.727, 678.606 )
 
-[node name="Bat12" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 550.396, -224.106 )
+[node name="DemonSlime13" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 418.495, 694.498 )
 
-[node name="Bat13" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 569.751, -183.393 )
+[node name="DemonSlime14" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 415.316, 778.195 )
 
-[node name="Bat14" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 480.317, -224.773 )
+[node name="DemonSlime15" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 279.705, 770.779 )
 
-[node name="Bat15" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 493.665, -180.056 )
+[node name="DemonSlime16" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 272.289, 714.627 )
 
-[node name="Bat16" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 532.376, -138.676 )
+[node name="DemonSlime17" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 217.197, 683.903 )
 
-[node name="Bat17" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 415.577, -106.64 )
+[node name="DemonSlime18" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 110.191, 819.514 )
 
-[node name="Bat18" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 308.79, -203.416 )
+[node name="DemonSlime19" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 10.6014, 729.46 )
 
-[node name="Bat19" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 282.761, -140.678 )
+[node name="DemonSlime20" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( -29.6582, 677.546 )
 
-[node name="Bat20" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 338.824, -161.368 )
+[node name="DemonSlime21" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 30.7312, 686.022 )
 
-[node name="Bat21" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 252.727, -222.771 )
+[node name="DemonSlime22" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( -38.1339, 727.341 )
 
-[node name="Bat22" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 183.315, -67.9297 )
+[node name="DemonSlime23" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 2.1257, 659.535 )
 
-[node name="Bat23" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 131.256, -218.099 )
+[node name="DemonSlime24" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 21.196, 557.827 )
 
-[node name="Bat24" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 13.123, -215.429 )
+[node name="DemonSlime25" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 182.234, 450.821 )
 
-[node name="Bat25" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 123.915, -144.683 )
+[node name="DemonSlime26" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 162.105, 505.913 )
 
-[node name="Bat26" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 20.4646, -165.373 )
+[node name="DemonSlime27" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 259.575, 534.519 )
 
-[node name="Bat27" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 306.007, -406.45 )
+[node name="DemonSlime28" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 217.197, 510.151 )
 
-[node name="Bat28" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 263.581, -513.93 )
+[node name="DemonSlime29" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 292.419, 458.237 )
 
-[node name="Bat29" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 207.012, -410.693 )
+[node name="DemonSlime30" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 415.316, 545.113 )
 
-[node name="Bat30" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 260.752, -339.982 )
+[node name="DemonSlime31" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 455.576, 523.924 )
 
-[node name="Bat31" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 330.049, -334.325 )
+[node name="DemonSlime32" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 494.776, 571.6 )
 
-[node name="Bat32" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 330.049, -474.332 )
+[node name="DemonSlime33" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 458.754, 583.254 )
 
-[node name="Bat33" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 287.622, -556.357 )
+[node name="DemonSlime34" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 539.273, 287.664 )
 
-[node name="Bat34" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 481.802, -352.372 )
+[node name="DemonSlime35" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 514.906, 341.697 )
 
-[node name="Bat35" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 595.264, -489.86 )
+[node name="DemonSlime36" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 514.906, 421.156 )
 
-[node name="Bat36" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 559.223, -565.946 )
+[node name="DemonSlime37" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 586.949, 332.161 )
 
-[node name="Bat37" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 73.3413, -359.046 )
+[node name="DemonSlime38" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 561.522, 408.443 )
 
-[node name="Bat38" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 412.391, -578.578 )
+[node name="DemonSlime39" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 380.354, 301.437 )
 
-[node name="Bat39" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 441.757, -639.981 )
+[node name="DemonSlime40" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 353.867, 334.28 )
 
-[node name="Bat40" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 585.92, -634.642 )
+[node name="DemonSlime41" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 317.846, 158.409 )
 
-[node name="Bat41" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 336.305, -746.768 )
+[node name="DemonSlime42" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 242.624, 209.264 )
 
-[node name="Bat42" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( -17.4277, -793.488 )
+[node name="DemonSlime43" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 308.311, 208.204 )
 
-[node name="Bat43" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 45.3097, -837.537 )
+[node name="DemonSlime44" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 184.353, 184.896 )
 
-[node name="Bat44" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 520.513, -828.193 )
+[node name="DemonSlime45" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 125.023, 268.594 )
 
-[node name="Bat45" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 90.6943, -884.257 )
+[node name="DemonSlime46" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 24.3744, 403.145 )
 
-[node name="Bat46" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( -12.0884, -571.904 )
+[node name="DemonSlime47" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 165.283, 135.101 )
 
-[node name="Bat47" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 5.26451, -645.32 )
+[node name="DemonSlime48" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 253.036, 103.687 )
 
-[node name="Bat48" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( -42.7897, -611.949 )
+[node name="DemonSlime49" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( -43.6337, 292.558 )
 
-[node name="Bat49" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( -16.0929, -455.773 )
+[node name="DemonSlime50" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( -80.1605, 342.448 )
 
-[node name="Bat50" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 61.3278, -519.845 )
+[node name="DemonSlime51" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( -49.87, 90.3235 )
 
-[node name="Bat51" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 165.445, -593.262 )
+[node name="DemonSlime52" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 475.76, 65.3784 )
 
-[node name="Bat52" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 214.834, -745.433 )
-
-[node name="Bat53" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 290.92, -672.017 )
-
-[node name="Bat54" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 296.26, -710.728 )
-
-[node name="Bat55" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 233.522, -692.04 )
-
-[node name="Bat56" parent="Bat" instance=ExtResource( 5 )]
-position = Vector2( 350.988, -690.705 )
+[node name="DemonSlime53" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 513.178, 92.9963 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 6 )
