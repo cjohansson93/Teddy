@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Tilesets/IceTileMap.png" type="Texture" id=1]
 [ext_resource path="res://YSort.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://World/Icedoor.png" type="Texture" id=4]
 [ext_resource path="res://Enemies/DemonSlime.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Music and Sounds/Walking Through Hell.wav" type="AudioStream" id=6]
+[ext_resource path="res://Story/CaveStory.tscn" type="PackedScene" id=7]
 
 [sub_resource type="TileSet" id=1]
 0/name = "IceTileMap.png 0"
@@ -490,6 +491,9 @@ position = Vector2( 475.76, 65.3784 )
 
 [node name="DemonSlime53" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 513.178, 92.9963 )
+
+[node name="CaveStory" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 141.602, -39.6823 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 6 )

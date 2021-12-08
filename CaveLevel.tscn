@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Tilesets/CaveTileMap.png" type="Texture" id=1]
 [ext_resource path="res://YSort.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://World/WelcomeMat.png" type="Texture" id=5]
 [ext_resource path="res://World/Portal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Bat.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Story/CaveStory.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Music and Sounds/Walking Through Hell.wav" type="AudioStream" id=9]
 
 [sub_resource type="TileSet" id=1]
@@ -571,68 +572,71 @@ position = Vector2( 134.024, 897.489 )
 [node name="Bat2" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 377.736, 944.432 )
 
-[node name="Bat" parent="." instance=ExtResource( 7 )]
+[node name="Bat3" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 504, 851 )
 
-[node name="Bat2" parent="." instance=ExtResource( 7 )]
+[node name="Bat4" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 505.257, 704.529 )
 
-[node name="Bat3" parent="." instance=ExtResource( 7 )]
+[node name="Bat5" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 458.81, 713.519 )
 
-[node name="Bat4" parent="." instance=ExtResource( 7 )]
+[node name="Bat6" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 481.284, 553.2 )
 
-[node name="Bat5" parent="." instance=ExtResource( 7 )]
+[node name="Bat7" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 324.711, 610.885 )
 
-[node name="Bat6" parent="." instance=ExtResource( 7 )]
+[node name="Bat8" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 115.697, 619.875 )
 
-[node name="Bat7" parent="." instance=ExtResource( 7 )]
+[node name="Bat9" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 132.928, 573.428 )
 
-[node name="Bat8" parent="." instance=ExtResource( 7 )]
+[node name="Bat10" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 163.643, 589.909 )
 
-[node name="Bat9" parent="." instance=ExtResource( 7 )]
+[node name="Bat11" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 156.901, 622.123 )
 
-[node name="Bat10" parent="." instance=ExtResource( 7 )]
+[node name="Bat12" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 138.921, 595.902 )
 
-[node name="Bat11" parent="." instance=ExtResource( 7 )]
+[node name="Bat13" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( -61.852, 473.79 )
 
-[node name="Bat12" parent="." instance=ExtResource( 7 )]
+[node name="Bat14" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 267.776, 432.587 )
 
-[node name="Bat13" parent="." instance=ExtResource( 7 )]
+[node name="Bat15" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 325.46, 288.749 )
 
-[node name="Bat14" parent="." instance=ExtResource( 7 )]
+[node name="Bat16" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 255.789, 135.922 )
 
-[node name="Bat16" parent="." instance=ExtResource( 7 )]
+[node name="Bat17" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 341.193, 35.5351 )
 
-[node name="Bat17" parent="." instance=ExtResource( 7 )]
+[node name="Bat18" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 168.138, 203.346 )
 
-[node name="Bat18" parent="." instance=ExtResource( 7 )]
+[node name="Bat19" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 346.437, 204.844 )
 
-[node name="Bat19" parent="." instance=ExtResource( 7 )]
+[node name="Bat20" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 471.545, 48.2708 )
 
-[node name="Bat20" parent="." instance=ExtResource( 7 )]
+[node name="Bat21" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 495.518, 196.603 )
 
-[node name="Bat21" parent="." instance=ExtResource( 7 )]
+[node name="Bat22" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 10.0667, 292.495 )
 
-[node name="Bat22" parent="." instance=ExtResource( 7 )]
+[node name="Bat23" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 19.0566, 48.2708 )
+
+[node name="CaveStory" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 319.886, 824.648 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 9 )
