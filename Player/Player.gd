@@ -11,6 +11,7 @@ enum {
 	ATTACK
 }
 
+var scene_path_to_load
 var state = MOVE
 var velocity = Vector2.ZERO
 var stats = PlayerStats
@@ -24,7 +25,7 @@ onready var blinkAnimationPlayer = $BlinkAnimationPlayer
 
 func _ready():
 	randomize()
-	stats.connect("no_health", self, "queue_free")
+	stats.connect("no_health", self, "_no_health")
 	animationTree.active = true
 	self.global_position = Global.player_initial_map_position
 
@@ -80,3 +81,9 @@ func _on_Hurtbox_invincibility_started():
 
 func _on_Hurtbox_invincibility_ended():
 	blinkAnimationPlayer.play("Stop")
+
+func _no_health():
+	queue_free()
+	scene_path_to_load = "res://Menu/GameOver.tscn"
+	stats.health = 5
+	get_tree().change_scene(scene_path_to_load)

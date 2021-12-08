@@ -1,0 +1,103 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Player/Player.png" type="Texture" id=1]
+[ext_resource path="res://Menu/Controls.gd" type="Script" id=2]
+[ext_resource path="res://Music and Sounds/Continue_.wav" type="AudioStream" id=3]
+[ext_resource path="res://Menu/FreestylingCentipede-ELpr.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Tilesets/environment-preview.png" type="Texture" id=5]
+[ext_resource path="res://Menu/Fade_In.tscn" type="PackedScene" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+outline_size = 2
+outline_color = Color( 0.827451, 0.0156863, 0.0156863, 1 )
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+outline_size = 1
+outline_color = Color( 0.827451, 0.0156863, 0.0156863, 1 )
+use_filter = true
+font_data = ExtResource( 4 )
+
+[node name="Victory" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TeddyBear" type="Sprite" parent="."]
+position = Vector2( 160.892, 90.5946 )
+scale = Vector2( 0.647775, 0.673165 )
+texture = ExtResource( 5 )
+
+[node name="MenuContainer" type="VBoxContainer" parent="."]
+margin_top = 30.0
+margin_right = 320.0
+margin_bottom = 150.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MenuContainer"]
+margin_right = 320.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Victory!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuContainer"]
+margin_top = 72.0
+margin_right = 320.0
+margin_bottom = 120.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="MenuContainer/HBoxContainer"]
+margin_left = 127.0
+margin_right = 193.0
+margin_bottom = 48.0
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReturnButton" type="Button" parent="MenuContainer/HBoxContainer/Buttons"]
+margin_top = 24.0
+margin_right = 66.0
+margin_bottom = 48.0
+focus_neighbour_top = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Main Menu"
+flat = true
+
+[node name="FadeIn" parent="." instance=ExtResource( 6 )]
+margin_left = 0.280617
+margin_right = 0.280609
+color = Color( 0, 0, 0, 0 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="Player" type="Sprite" parent="."]
+position = Vector2( 77.316, 152.895 )
+scale = Vector2( 0.647775, 0.673165 )
+texture = ExtResource( 1 )
+hframes = 40
+frame = 18
+
+[connection signal="pressed" from="MenuContainer/HBoxContainer/Buttons/ReturnButton" to="." method="_on_ReturnButton_pressed"]
+[connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]

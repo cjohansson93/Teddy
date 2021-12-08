@@ -4,10 +4,10 @@
 [ext_resource path="res://Stats.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Boxes/Hurtbox.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Enemies/Nightmare.gd" type="Script" id=5]
+[ext_resource path="res://Enemies/FinalBoss.gd" type="Script" id=5]
 [ext_resource path="res://WhiteColor.shader" type="Shader" id=6]
 [ext_resource path="res://Shadows/SmallShadow.png" type="Texture" id=7]
-[ext_resource path="res://Enemies/NightmareIdle.tres" type="SpriteFrames" id=8]
+[ext_resource path="res://Enemies/FinalBossFrames.tres" type="SpriteFrames" id=8]
 [ext_resource path="res://Boxes/SoftCollision.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Enemies/WanderController.tscn" type="PackedScene" id=11]
 
@@ -17,22 +17,22 @@ shader = ExtResource( 6 )
 shader_param/active = false
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 4.4375
+radius = 14.0204
 height = 15.375
 
 [sub_resource type="CapsuleShape2D" id=3]
-radius = 9.56562
-height = 12.7356
+radius = 28.5409
+height = 57.9963
 
 [sub_resource type="CircleShape2D" id=4]
-radius = 73.0069
+radius = 132.308
 
 [sub_resource type="CapsuleShape2D" id=5]
-radius = 7.93177
-height = 13.5281
+radius = 24.6632
+height = 43.1526
 
 [sub_resource type="CapsuleShape2D" id=6]
-radius = 3.0625
+radius = 5.89976
 height = 17.625
 
 [sub_resource type="Animation" id=7]
@@ -66,19 +66,16 @@ tracks/0/keys = {
 "values": [ false ]
 }
 
-[node name="Nightmare" type="KinematicBody2D"]
+[node name="FinalBoss" type="KinematicBody2D"]
 collision_layer = 4
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 1 )
-position = Vector2( -0.800597, -14.4789 )
-scale = Vector2( 0.356229, 0.337836 )
+position = Vector2( -7.93584, -13.9958 )
+scale = Vector2( 0.703081, 0.675397 )
 frames = ExtResource( 8 )
-animation = "run"
+animation = "idle"
 frame = 2
 speed_scale = 0.5
 playing = true
@@ -90,19 +87,19 @@ scale = Vector2( 2.51532, 1 )
 texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1.125, -7.3125 )
-rotation = 1.5708
+position = Vector2( 1.43633, -14.8851 )
 shape = SubResource( 2 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 4 )]
 collision_layer = 4096
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
-position = Vector2( -0.65551, -13.0936 )
+position = Vector2( 0.458115, -14.0959 )
 rotation = 1.5708
 shape = SubResource( 3 )
 
 [node name="Stats" parent="." instance=ExtResource( 2 )]
+max_health = 10
 
 [node name="PlayerDetectionZone" parent="." instance=ExtResource( 3 )]
 collision_mask = 8
@@ -116,14 +113,14 @@ shape = SubResource( 4 )
 collision_mask = 8192
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
-position = Vector2( -0.71492, -12.5568 )
+position = Vector2( -0.380833, -12.5568 )
 rotation = 1.5708
 shape = SubResource( 5 )
 
 [node name="SoftCollision" parent="." instance=ExtResource( 10 )]
 
 [node name="CollisionShape2D" parent="SoftCollision" index="0"]
-position = Vector2( -1.0625, -5.375 )
+position = Vector2( 1.72156, 5.42715 )
 rotation = 1.5708
 shape = SubResource( 6 )
 
