@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Tilesets/IceTileMap.png" type="Texture" id=1]
 [ext_resource path="res://YSort.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Enemies/DemonSlime.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Music and Sounds/Walking Through Hell.wav" type="AudioStream" id=6]
 [ext_resource path="res://Story/CaveStory.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=8]
 
 [sub_resource type="TileSet" id=1]
 0/name = "IceTileMap.png 0"
@@ -499,8 +500,14 @@ position = Vector2( 141.602, -39.6823 )
 stream = ExtResource( 6 )
 autoplay = true
 
+[node name="PauseLayer" parent="." instance=ExtResource( 8 )]
+
+[node name="Pause" parent="PauseLayer" index="0"]
+visible = false
+
 [editable path="YSort"]
 [editable path="YSort/Player"]
 [editable path="YSort/Player/HitboxPivot/SwordHitbox"]
 [editable path="YSort/Player/Hurtbox"]
 [editable path="YSort/Player/Portalbox"]
+[editable path="PauseLayer"]

@@ -92,7 +92,6 @@ func _on_Stats_no_health():
 	get_parent().add_child(enemyDeathEffect)
 	enemyDeathEffect.global_position = global_position
 	scene_path_to_load = "res://Menu/Victory.tscn"
-	stats.health = 5
 	get_tree().change_scene(scene_path_to_load)
 
 func _on_Hurtbox_invincibility_started():

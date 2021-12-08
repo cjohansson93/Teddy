@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Tilesets/CaveTileMap.png" type="Texture" id=1]
 [ext_resource path="res://YSort.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Bat.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Story/CaveStory.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Music and Sounds/Walking Through Hell.wav" type="AudioStream" id=9]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=10]
 
 [sub_resource type="TileSet" id=1]
 0/name = "CaveTileMap.png 0"
@@ -642,9 +643,15 @@ position = Vector2( 319.886, 824.648 )
 stream = ExtResource( 9 )
 autoplay = true
 
+[node name="PauseLayer" parent="." instance=ExtResource( 10 )]
+
+[node name="Pause" parent="PauseLayer" index="0"]
+visible = false
+
 [editable path="Portal"]
 [editable path="YSort"]
 [editable path="YSort/Player"]
 [editable path="YSort/Player/HitboxPivot/SwordHitbox"]
 [editable path="YSort/Player/Hurtbox"]
 [editable path="YSort/Player/Portalbox"]
+[editable path="PauseLayer"]

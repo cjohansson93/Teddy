@@ -83,7 +83,7 @@ func _on_Hurtbox_invincibility_ended():
 	blinkAnimationPlayer.play("Stop")
 
 func _no_health():
+	Global.player_initial_map_position = Vector2(-6.432,904.117)
 	queue_free()
 	scene_path_to_load = "res://Menu/GameOver.tscn"
-	stats.health = 5
 	get_tree().change_scene(scene_path_to_load)

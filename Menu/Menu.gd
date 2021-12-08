@@ -25,8 +25,8 @@ func _on_ControlsButton2_pressed():
 
 func _on_QuitButton3_pressed():
 	get_tree().quit()
-	get_tree().quit()
 
 
 func _on_FadeIn_fade_finished():
 	get_tree().change_scene(scene_path_to_load)
+	PlayerStats.health = 5

@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
 [node name="YSort" type="YSort"]
 __meta__ = {
@@ -8,3 +10,11 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
+
+[node name="AnimationTree" parent="Player" index="4"]
+parameters/playback = SubResource( 1 )
+
+[editable path="Player"]
+[editable path="Player/HitboxPivot/SwordHitbox"]
+[editable path="Player/Hurtbox"]
+[editable path="Player/Portalbox"]

@@ -854,7 +854,7 @@ anims/Start = SubResource( 49 )
 anims/Stop = SubResource( 50 )
 
 [node name="Portalbox" parent="." instance=ExtResource( 11 )]
-collision_layer = 80
+collision_layer = 16
 collision_mask = 0
 
 [node name="CollisionShape2D" parent="Portalbox" index="0"]

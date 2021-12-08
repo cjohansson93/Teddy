@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Menu/BackgroundSpriteSheet (1).png" type="Texture" id=1]
-[ext_resource path="res://Music and Sounds/Continue_.wav" type="AudioStream" id=2]
+[ext_resource path="res://Music and Sounds/Main Theme.wav" type="AudioStream" id=2]
 [ext_resource path="res://Menu/Menu.gd" type="Script" id=3]
 [ext_resource path="res://Menu/FreestylingCentipede-ELpr.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Menu/Fade_In.tscn" type="PackedScene" id=6]

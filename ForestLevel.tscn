@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Tilesets/RPG Nature Tileset.png" type="Texture" id=1]
 [ext_resource path="res://Tilesets/tileset (1).png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Music and Sounds/Walking Through Hell.wav" type="AudioStream" id=11]
 [ext_resource path="res://Story/CaveStory.tscn" type="PackedScene" id=12]
 [ext_resource path="res://World/Grass.png" type="Texture" id=13]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=14]
 
 [sub_resource type="TileSet" id=1]
 0/name = "tileset (1).png 0"
@@ -472,6 +473,8 @@ points = PoolVector2Array( 0.820869, 27.7923, 12.4493, 2.92044, 20.2015, 3.08195
 } ]
 0/z_index = 0
 
+[sub_resource type="AnimationNodeStateMachinePlayback" id=29]
+
 [node name="ForestLevel" type="Node2D"]
 
 [node name="GrassTileMap" type="TileMap" parent="."]
@@ -527,6 +530,9 @@ position = Vector2( -41.2658, -69.3574 )
 
 [node name="YSort" parent="." instance=ExtResource( 3 )]
 position = Vector2( 241.363, 965.644 )
+
+[node name="AnimationTree" parent="YSort/Player" index="4"]
+parameters/playback = SubResource( 29 )
 
 [node name="Nightmare" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 116.353, -346.445 )
@@ -694,4 +700,14 @@ player_spawn_location = Vector2( 235, 535 )
 stream = ExtResource( 11 )
 autoplay = true
 
+[node name="PauseLayer" parent="." instance=ExtResource( 14 )]
+
+[node name="Pause" parent="PauseLayer" index="0"]
+visible = false
+
 [editable path="YSort"]
+[editable path="YSort/Player"]
+[editable path="YSort/Player/HitboxPivot/SwordHitbox"]
+[editable path="YSort/Player/Hurtbox"]
+[editable path="YSort/Player/Portalbox"]
+[editable path="PauseLayer"]
