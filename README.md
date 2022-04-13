@@ -7,4 +7,4 @@
 # 1) Download Godot by following their instructions: https://godotengine.org/
 # 2) Go to this Google Drive: https://drive.google.com/drive/folders/18UQEACFEhswWDv8PI5Ks3pKik3hwIamv
 # 3) Download the exe.file in the folder
-# 4) If Windows defender warns about download, ignore it and ran anyway.
+# 4) If Windows defender or other equivalent warns about download, ignore it and ran anyway.
